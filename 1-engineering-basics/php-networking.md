@@ -13,6 +13,7 @@ echo $xml->heading . "<br>";
 echo $xml->body;
 ?>
 ```
+
 **Note**: `simplexml_load_string()` is yet another function that can be used to load an XML string.
 
 ### DNS and SSL
@@ -29,9 +30,26 @@ echo $xml->body;
 - **path/to/file.html**: Path
 - **http://rtcamp.example.com**: Host
 
+**How Web Works**:
+
+1. **DNS Lookup**: Resolves the domain to an IP address.
+2. **TCP Connection**: Establishes a connection to the server.
+3. **TLS Handshake**: Establishes a secure connection (for HTTPS).
+4. **HTTP Request/Response**: Communicates with the server to fetch content.
+5. **Browser Rendering**: Parses and renders the content in the browser.
+
+**Rendering Process**:
+
+1. **HTML Parsing**: The browser parses the HTML content.
+2. **CSS Parsing**: The browser parses the CSS content.
+3. **Render Tree Construction**: The browser constructs a render tree.
+4. **Layout**: The browser calculates the layout of the render tree.
+5. **Painting**: The browser paints the render tree.
+
 **SSL**: Secure Sockets Layer (SSL) is a standard security protocol for establishing encrypted links between a web server and a browser in an online communication.
 
 **How SSL Works**:
+
 1. A browser requests a secure page (https://).
 2. The web server sends its public key with its certificate.
 3. The browser checks the certificate root against a list of trusted CAs.
@@ -50,6 +68,7 @@ echo $xml->body;
 **cURL**: cURL is a command-line tool that can be used to test APIs and web services.
 
 **cURL Options**:
+
 - **X**: Specifies a proxy server through which the request should be routed
 - **H**: Specifies an extra header to include in the request when sending HTTP to a server.
 - **d**: Sends the specified data in a POST request to the HTTP server.
@@ -57,6 +76,7 @@ echo $xml->body;
 - **k**: Allows cURL to perform "insecure" SSL connections and transfers.
 
 **Example**:
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"key": "value"}' https://example.com -u username:password -k
 ```

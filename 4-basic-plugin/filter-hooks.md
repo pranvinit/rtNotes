@@ -18,13 +18,16 @@
 4. **Add Meta Boxes**: Use the `add_meta_boxes` action to add meta boxes to post edit screens.
 5. **Add Shortcodes**: Use the `init` action to add shortcodes.
 6. **Save Post Meta**: Use the `save_post` action to save post meta data.
-8. **Customize the Admin Menu**: Use the `admin_menu` action to register settings for the admin menu.
-9. **Add Settings Pages**: Use the `admin_init` action to add pages or subpages to the admin menu.
-10. **Show Admin Notices**: Use the `admin_notices` action to display admin notices.
-11. **Ajax Requests**: Use the `wp_ajax_{action}` and `wp_ajax_nopriv_{action}` actions for handling AJAX requests (action parameter comes form the `data.action` key in the AJAX request).
-12. **Custom REST API Endpoints**: Use the `rest_api_init` action to add custom REST API endpoints.
-13. **Rewrite Rules**: Use the `post_type_link` to replace placeholders in the permalink structure.
-14. **CRON Schedules**: Use the `cron_schedules` filter to add custom CRON schedules.
+7. **Customize the Admin Menu**: Use the `admin_menu` action to register settings for the admin menu.
+8. **Add Settings Pages**: Use the `admin_init` action to add pages or subpages to the admin menu.
+9. **Show Admin Notices**: Use the `admin_notices` action to display admin notices.
+10. **Ajax Requests**: Use the `wp_ajax_{action}` and `wp_ajax_nopriv_{action}` actions for handling AJAX requests (action parameter comes form the `data.action` key in the AJAX request).
+11. **Custom REST API Endpoints**: Use the `rest_api_init` action to add custom REST API endpoints.
+12. **Rewrite Rules**: Use the `post_type_link` to replace placeholders in the permalink structure.
+13. **CRON Schedules**: Use the `cron_schedules` filter to add custom CRON schedules.
+14. **Dashboard Widgets**: Use the `wp_dashboard_setup` action to add dashboard widgets.
+
+**Note**: Default priority for actions and filters is 10. Lower numbers correspond to earlier execution.
 
 #### Theme Development
 

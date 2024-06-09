@@ -1,19 +1,23 @@
 ### Basic Theme Development
 
 #### Types of Themes
+
 1. **Parent Theme**: The main theme that contains all the required files and functionalities.
-**Notables**:
+   **Notables**:
+
 - It can have multiple child themes.
 - It requires both `style.css` and `index.php` files.
 - It can be a standalone theme.
 
 2. **Child Theme**: A theme that inherits the styles and functionalities of a parent theme.
-**Notables**:
+   **Notables**:
+
 - It requires a `style.css` file.
 - It can override the parent theme's styles and functionalities.
 - It can have its own styles and functionalities.
 
 #### Theme Files (Commonly Used)
+
 1. **style.css**: Contains the theme's metadata and styles.
 2. **functions.php**: Contains the theme's functions and hooks.
 3. **index.php**: The main template file used as a fallback for other templates.
@@ -32,21 +36,25 @@
 ### Nav Menus and Widgets (Commonly Used Functions)
 
 1. `register_nav_menus()`: Registers navigation menus.
-    - `$locations`: An array of menu locations.
+
+   - `$locations`: An array of menu locations.
 
 2. `has_nav_menu()`: Checks if a menu exists.
-    - `$location`: The menu location.
+
+   - `$location`: The menu location.
 
 3. `wp_nav_menu()`: Displays a navigation menu.
 
 4. `register_sidebar()`: Registers a sidebar.
-    - `$args`: An array of sidebar arguments.
+
+   - `$args`: An array of sidebar arguments.
 
 5. `is_active_sidebar()`: Checks if a sidebar is active.
-    - `$index`: The sidebar index.
+
+   - `$index`: The sidebar index.
 
 6. `dynamic_sidebar()`: Displays a sidebar.
-    - `$index`: The sidebar index.
+   - `$index`: The sidebar index.
 
 ### Block template syntax
 
@@ -75,7 +83,6 @@
 3. `is_page()`: Checks if the current page is a page.
 4. `is_single()`: Checks if the current page is a single post.
 5. `is_archive()`: Checks if the current page is an archive page.
-
 
 #### Template Tags (Commonly Used)
 

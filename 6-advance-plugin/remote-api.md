@@ -3,7 +3,8 @@
 #### Functions
 
 1. `wp_remote_get()`: Sends a GET request to a remote server.
-Example:
+   Example:
+
 ```php
 $headers = array(
     'Authorization' => 'Bearer ' . $access_token,
@@ -12,12 +13,13 @@ $headers = array(
 $response = wp_remote_get( 'https://api.example.com/data', array(
     'headers' => $headers,
     'cookies' => $_COOKIE,
-    'timeout' => 60,
+    'timeout' => 60, // Default is 5 seconds
 ) );
 ```
 
 2. `wp_remote_post()`: Sends a POST request to a remote server.
-Example:
+   Example:
+
 ```php
 $headers = array(
     'Authorization' => 'Bearer ' . $access_token,
@@ -37,7 +39,8 @@ $response = wp_remote_post( 'https://api.example.com/data', array(
 ```
 
 3. `wp_remote_request()`: Sends a request to a remote server.
-Example:
+   Example:
+
 ```php
 $response = wp_remote_request( 'https://api.example.com/data', array(
     'method' => 'GET',
@@ -50,6 +53,7 @@ $response = wp_remote_request( 'https://api.example.com/data', array(
 To make XML-RPC requests in using the wp_remote_get/post/request functions, you can use the 'Content-Type' header with the value 'application/xml'.
 
 Example:
+
 ```php
 $headers = array(
     'Authorization' => 'Bearer ' . $access_token,
@@ -72,7 +76,6 @@ $response = wp_remote_post( 'https://api.example.com/xml-rpc', array(
 2. `wp_remote_retrieve_header()`: Retrieves a header from the response.
 3. `wp_remote_retrieve_headers()`: Retrieves all headers from the response.
 
-
 #### Commonly Used User Meta Data
 
 1. User ID (meta key: ID)
@@ -82,12 +85,12 @@ $response = wp_remote_post( 'https://api.example.com/xml-rpc', array(
 5. Authentication tokens or keys (for OAuth)
 6. Last login time (custom meta key)
 
-
 #### Intercepting HTTP Requests
 
-To intercept HTTP requests and responses, you can use the `pre_http_request` http_request_args` and `http_response` filters.
+To intercept HTTP requests and responses, you can use the `pre_http_request` http_request_args`and`http_response` filters.
 
 Example:
+
 ```php
 
 add_filter( 'pre_http_request', 'intercept_pre_http_request', 10, 3 );

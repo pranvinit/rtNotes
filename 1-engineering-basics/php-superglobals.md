@@ -21,19 +21,19 @@ Superglobals are built-in variables in PHP that are always accessible, regardles
     - 
 **Note**: 'HTTP_HOST' and 'HTTP_REFERER' can be used interchangeably to get the hostname of the client.
 
-1. **$_REQUEST**: It is an associative array of variables containing the contents of $_GET, $_POST, and $_COOKIE.
+3. **$_REQUEST**: It is an associative array of variables containing the contents of $_GET, $_POST, and $_COOKIE.
 
-2. **$_POST**: It is an associative array of variables passed to the current script via the HTTP POST method.
+4. **$_POST**: It is an associative array of variables passed to the current script via the HTTP POST method.
 
-3. **$_GET**: It is an associative array of variables passed to the current script via the URL parameters.
+5. **$_GET**: It is an associative array of variables passed to the current script via the URL parameters.
 
-4. **$_FILES**: It is an associative array of items uploaded to the current scipt using multipart/form-data POST request.
+6. **$_FILES**: It is an associative array of items uploaded to the current scipt using multipart/form-data POST request.
 **Notables**:
     - $_FILES['file']['name'] returns the original name of the uploaded file.
     - $_FILES['file']['type'] returns the MIME type of the uploaded file.
     - $_FILES['file']['size'] returns the size of the uploaded file in bytes.
   
-1. **$_COOKIE**: It is an associative array of variables passed to the current script via HTTP Cookies.
+7. **$_COOKIE**: It is an associative array of variables passed to the current script via HTTP Cookies.
 **Notables**:
     - $_COOKIE['name'] returns the value of the cookie with the specified name.
     - $_COOKIE['name'] is used to set a cookie with the specified name and value.
@@ -41,12 +41,12 @@ Superglobals are built-in variables in PHP that are always accessible, regardles
     - setcookie('name', 'value', time() + 3600) sets a cookie with the specified name, value, and expiration time.
     - unset($_COOKIE['name']) deletes a cookie with the specified name.
 
-1. **$_SESSION**: It is an associative array containing session variables available to the current script.
+8. **$_SESSION**: It is an associative array containing session variables available to the current script.
 **Notables**:
     - $_SESSION['name'] returns the value of the session variable with the specified name.
     - $_SESSION['name'] is used to set a session variable with the specified name and value.
 
-1. **$_ENV**: It is an associative array of variables passed to the current script via the environment method.
+9. **$_ENV**: It is an associative array of variables passed to the current script via the environment method.
 **Notables**:
     - $_ENV['name'] returns the value of the environment variable with the specified name.
     - $_ENV['name'] is used to set an environment variable with the specified name and value.
